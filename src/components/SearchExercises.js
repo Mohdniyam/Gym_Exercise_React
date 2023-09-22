@@ -1,6 +1,6 @@
 import { Box, Button, Stack, TextField, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
-import { optionsExercise, fetchData } from "../api/FetchData";
+import { optionsExercise, fetchData, optionsPart} from "../api/FetchData";
 import { HorizontalScrollbar } from "./HorizontalScrollbar";
 
 export function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
@@ -11,14 +11,14 @@ export function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
     const bodyList = async () => {
       const bodyData = await fetchData(
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
-        optionsExercise
+        optionsPart
       );
       setBodyParts(["all", ...bodyData]);
     };
 
     const exerciseFunction = async () => {
       const exerciseData = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises",
+        "https://exercisedb.p.rapidapi.com/exercises?limit=400",
         optionsExercise
       );
       setExercises(exerciseData)
@@ -32,7 +32,7 @@ export function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
     if (search) {
       console.log(search);
       const exerciseData = await fetchData(
-        "https://exercisedb.p.rapidapi.com/exercises",
+        "https://exercisedb.p.rapidapi.com/exercises?limit=400",
         optionsExercise
       );
       console.log("excercise", exerciseData);
