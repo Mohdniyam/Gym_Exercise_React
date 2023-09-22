@@ -34,7 +34,7 @@ export function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
           exercise.equipment.toLowerCase().includes(search)
       );
       setSearch("");
-      console.log("2", searchExercise);
+      setExercises(searchExercise);
     }
   };
   return (
