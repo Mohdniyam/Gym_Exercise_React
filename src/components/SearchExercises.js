@@ -15,7 +15,17 @@ export function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
       );
       setBodyParts(["all", ...bodyData]);
     };
+
+    const exerciseFunction = async () => {
+      const exerciseData = await fetchData(
+        "https://exercisedb.p.rapidapi.com/exercises",
+        optionsExercise
+      );
+      setExercises(exerciseData)
+    }
     bodyList();
+    exerciseFunction();
+
   }, []);
 
   const handleSearch = async () => {
