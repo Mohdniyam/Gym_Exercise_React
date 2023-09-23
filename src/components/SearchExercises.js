@@ -13,6 +13,7 @@ export function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
         "https://exercisedb.p.rapidapi.com/exercises/bodyPartList",
         optionsPart
       );
+      console.log(bodyData)
       setBodyParts(["all", ...bodyData]);
     };
 
