@@ -1,4 +1,4 @@
-import { Button, Stack } from '@mui/material'
+import { Button, Stack, Typography } from '@mui/material'
 import React from 'react'
 import { Link } from 'react-router-dom'
 
@@ -14,6 +14,9 @@ export function ExerciseCard({exercise}) {
         {exercise.target}
       </Button>
     </Stack>
+      <Typography ml="21px" color="#000" fontWeight="bold" sx={{ fontSize: { lg: '24px', xs: '20px' } }} mt="11px" pb="10px" textTransform="capitalize">
+      {exercise.name}
+    </Typography>
     </Link>
   )
 }
