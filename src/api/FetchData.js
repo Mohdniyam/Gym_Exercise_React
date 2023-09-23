@@ -5,13 +5,21 @@ export const optionsExercise = {
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
   },
 };
-
+ 
 export const optionsPart = {
   method: 'GET',
   params : {limit : '10'},
   headers: {
     'X-RapidAPI-Key': 'fbd6810a0fmsh44e7e1aa371b80cp13ce62jsnd8dcb92d4cb0',
     'X-RapidAPI-Host': 'exercisedb.p.rapidapi.com'
+  }
+};
+
+export const youtubeOptions = {
+  method: 'GET',
+  headers: {
+    'X-RapidAPI-Key': 'fbd6810a0fmsh44e7e1aa371b80cp13ce62jsnd8dcb92d4cb0',
+    'X-RapidAPI-Host': 'youtube-search-and-download.p.rapidapi.com'
   }
 };
 
