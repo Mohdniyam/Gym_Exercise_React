@@ -16,6 +16,8 @@ export function ExerciseInfo() {
   const { id }  = useParams();
   console.log(id)
 
+
+
   useEffect(()=>{
     const fetchExerciseData =  async() => {
        const exerciseDbUrl = 'https://exercisedb.p.rapidapi.com';
